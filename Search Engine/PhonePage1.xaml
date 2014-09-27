@@ -1,0 +1,36 @@
+﻿<phone:PhoneApplicationPage 
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+	xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	mc:Ignorable="d" d:DesignWidth="480" d:DesignHeight="768"
+	x:Class="SearchEngine.PhonePage1"
+	FontFamily="{StaticResource PhoneFontFamilyNormal}"
+	FontSize="{StaticResource PhoneFontSizeNormal}"
+	Foreground="{StaticResource PhoneForegroundBrush}"
+	Orientation="Portrait"
+	shell:SystemTray.IsVisible="True">
+
+	<!--LayoutRoot is the root grid where all page content is placed-->
+	<Grid x:Name="LayoutRoot" Background="Transparent">
+		<Grid.RowDefinitions>
+			<RowDefinition Height="Auto"/>
+			<RowDefinition Height="*"/>
+		</Grid.RowDefinitions>
+		
+		<!--TitlePanel contains the name of the application and page title-->
+
+		<!--ContentPanel - place additional content here-->
+		<Grid x:Name="Mediapage" Grid.Row="1" Margin="12,0,12,0">
+			<Grid.Background>
+				<ImageBrush ImageSource="/Phonepage1back.png" Stretch="Fill"/>
+			</Grid.Background>
+			<TextBlock x:Name="Mymedia" Margin="8,40,8,0" TextWrapping="Wrap" Text="     Media" VerticalAlignment="Top" Height="95" FontFamily="Arial Rounded MT Bold" FontSize="80"/>
+			<Button x:Name="Myimage" Content="Image" Margin="75,0,76,222" VerticalAlignment="Bottom" FontFamily="Arial Rounded MT Bold" RenderTransformOrigin="0.53,1.086"/>
+			<Button x:Name="Mymp4" Content="Video" Margin="75,378,76,322" FontFamily="Arial Rounded MT Bold" d:LayoutOverrides="Height"/>
+			<Button x:Name="Mymp3" Content="Audio" Margin="75,284,76,0" VerticalAlignment="Top" FontFamily="Arial Rounded MT Bold"/>
+		</Grid>
+	</Grid>
+</phone:PhoneApplicationPage>
